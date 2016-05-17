@@ -6,11 +6,15 @@ t = 0; %time variable
 h = .5; %step size for time 
 v = .25; %m/s
 rVector =0;% distance travled
-direction = 1; % simulates 180 turns
+direction = -1; % simulates 180 turns
 
 % loops at h interval to ten mins 
 %   body of loop calculates the positions of bots
-for t=0:h:60
+x0 = R*sin(pi/4);
+y0 = R*cos(pi/4);
+yb1(1) =y0;
+xb1(1) =x0;
+for t=0:h:600
     %troll bot 1
     theta = (v*t)/R;
     yt1((1/h)*t + 1) = R*sin(theta);
@@ -18,15 +22,21 @@ for t=0:h:60
     
     %bot 1
     thetaBot1 = pi/4;
-    x0 = R*sin(pi/4);
-    y0 = R*cos(pi/4);
-    rVector = v*t;
-    yb1((1/h)*t + 1) = direction * rVector*sin(thetaBot1) + y0;
-    xb1((1/h)*t + 1) = direction * rVector*cos(thetaBot1) + x0;
-    if mod(t,20) == 0
-       direction = direction * -1
-    end
     
+    rVector = v*h ;
+    yb1((1/h)*t + 2) = direction*rVector*sin(thetaBot1) + yb1((1/h)*t+1);
+    xb1((1/h)*t + 2) = direction*rVector*cos(thetaBot1) + xb1((1/h)*t+1);
+    if mod(t,20) == 0
+       direction = direction * -1;
+    end
+    deltaT1B1y = yb1((1/h)*t + 2)-yt1((1/h)*t + 1);
+    deltaT1B1x = xb1((1/h)*t + 2)-xt1((1/h)*t + 1);
+    colitionRT1B1 = sqrt((deltaT1B1y^2) + (deltaT1B1x^2));
+    if colitionRT1B1 < .68
+       direction = direction * -1;
+       disp('colition')
+       t
+    end
     
 end
 
