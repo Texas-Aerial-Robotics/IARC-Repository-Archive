@@ -1,5 +1,5 @@
 %the purpose of this script is to calculate the robots positions overtime
-% last modified 5/18/2016 3:28am by Eric Johnson
+% last modified 5/18/2016 2:48pm by Eric Johnson
 clc; clear all
 RT = 5; %radius for troll bots
 t = 0; %time variable
@@ -18,13 +18,6 @@ for i=1:10
     yBots(1,i) =y0Bot(i);
     xBots(1,i) =x0Bot(i);
 end
-% %loops 4 times for the 4 troll bots
-% %   the body of the loop calculates the initial positions of the troll bots
-% for i=1:4
-%   theta0 = (2*pi/4) * i;
-%   yt1((1/h)*t + 1,i) = RT*sin(theta0);
-%   xt1((1/h)*t + 1,i) = RT*cos(theta0);
-% end
 
 % loops at h interval to ten mins
 %   body of loop calculates the positions of bots
@@ -86,6 +79,7 @@ for i=1:length(xt1)
     end
     hold on
     drawnow
+    cla
 end
 hold off
 
