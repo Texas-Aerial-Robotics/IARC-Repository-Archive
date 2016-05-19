@@ -28,7 +28,7 @@ for t=0:h:600
     end
     %troll bots positions
     for n=1:4
-        theta = (v*t)/RT;
+        theta = -(v*t)/RT;
         theta0 = (2*pi/4);
         yt1((1/h)*t + 2,n) = RT*sin(theta + theta0*n);
         xt1((1/h)*t + 2,n) = RT*cos(theta+ theta0*n);
@@ -64,11 +64,12 @@ for t=0:h:600
             end
         end
     end
+  
 end
 
 
 figure(1)
-axis([-10,10,-10,10]);
+axis([-10,10,-10,10,]);
 hold on
 for i=1:length(xt1)
     for k=1:4
