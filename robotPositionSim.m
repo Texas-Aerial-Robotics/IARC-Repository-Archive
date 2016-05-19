@@ -11,8 +11,8 @@ R=1; %starting radius for normal bots
 
 %loops 10 times
 %   the body of the for loop set the intial postiotions of the bots
+dtheta0 = 2*pi / 10;
 for i=1:10
-    dtheta0 = 2*pi / 10;
     x0Bot(i) = R*cos(dtheta0*i);
     y0Bot(i) = R*sin(dtheta0*i);
     yBots(1,i) =y0Bot(i);
@@ -27,9 +27,14 @@ for t=0:h:600
         direction = direction * -1;
     end
     %troll bots positions
+    theta = (v*t)/RT;
+    theta0 = (2*pi/4);
     for n=1:4
+<<<<<<< HEAD
         theta = -(v*t)/RT;
         theta0 = (2*pi/4);
+=======
+>>>>>>> origin/master
         yt1((1/h)*t + 2,n) = RT*sin(theta + theta0*n);
         xt1((1/h)*t + 2,n) = RT*cos(theta+ theta0*n);
     end
@@ -41,9 +46,9 @@ for t=0:h:600
     %loops ten times 
     %   body of loop calculates the position for the ten bots at the
     %   specific t value
+    rVector = v*h ;
     for k=1:10
         thetaBot = dtheta0*k;
-        rVector = v*h ;
         yBots((1/h)*t + 2,k) = direction(k)*rVector*sin(thetaBot) + yBots((1/h)*t+1,k);
         xBots((1/h)*t + 2,k) = direction(k)*rVector*cos(thetaBot) + xBots((1/h)*t+1,k);
     end
@@ -54,10 +59,10 @@ for t=0:h:600
         for i=1:10
             deltaRy(i) = yBots((1/h)*t + 2, i)-yt1((1/h)*t + 1,ii);
             deltaRx(i) = xBots((1/h)*t + 2, i)-xt1((1/h)*t + 1,ii);
-            collition(i) = sqrt((deltaRy(i)^2) + (deltaRx(i)^2));
-            if collition(i) < .68
+            collision(i) = sqrt((deltaRy(i)^2) + (deltaRx(i)^2));
+            if collision(i) < .68
                 direction(i) = direction(i) * -1;
-                disp('collition')
+                disp('collision')
                 t
                 i
                 ii
