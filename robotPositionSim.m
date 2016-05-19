@@ -30,11 +30,8 @@ for t=0:h:600
     theta = (v*t)/RT;
     theta0 = (2*pi/4);
     for n=1:4
-<<<<<<< HEAD
         theta = -(v*t)/RT;
         theta0 = (2*pi/4);
-=======
->>>>>>> origin/master
         yt1((1/h)*t + 2,n) = RT*sin(theta + theta0*n);
         xt1((1/h)*t + 2,n) = RT*cos(theta+ theta0*n);
     end
