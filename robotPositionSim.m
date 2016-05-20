@@ -8,6 +8,9 @@ v = .25; %m/s
 rVector =0;% distance travled
 direction = -1*ones(1,10); % simulates 180 turns
 R=1; %starting radius for normal bots
+objective = 0; %logical variable that shows if the quad copter has an objective
+xquad = 0; %starting x position for quad
+yquad = 10; %starting y position for quad
 
 %loops 10 times
 %   the body of the for loop set the intial postiotions of the bots
@@ -22,6 +25,12 @@ end
 % loops at h interval to ten mins
 %   body of loop calculates the positions of bots
 for t=0:h:600
+    %decide what bot to fly to
+    if objective == 0
+        %calculate which bot to fly to
+        
+    end
+    
     if mod(t,20) == 0
         disp('time')
         direction = direction * -1;
@@ -35,8 +44,7 @@ for t=0:h:600
         yt1((1/h)*t + 2,n) = RT*sin(theta + theta0*n);
         xt1((1/h)*t + 2,n) = RT*cos(theta+ theta0*n);
     end
-    
-    
+   
     %bot positions
     %%%
     
@@ -50,6 +58,9 @@ for t=0:h:600
         xBots((1/h)*t + 2,k) = direction(k)*rVector*cos(thetaBot) + xBots((1/h)*t+1,k);
     end
     
+    %loops 4 time sfor the 4 troll bots
+    %   the body of the loop calculates the distance between the bots and
+    %   the obstical troll bots
     for ii=1:4
         %loops ten for ten bots
         %   body of the loop cheks for collisions between bots
@@ -66,10 +77,31 @@ for t=0:h:600
             end
         end
     end
-  
+    
+    %%% bot to bot needs algo to account for direction
+    
+    %check for bot to bot collisions 
+    %loops ten times to incriment the 10 bors
+    %   body of loop calculates the distance between the 10 bots
+    for ii=1:10
+        %loops ten times to incriment the 10 bors
+        %   body of loop calculates the distance between the 10 bots
+        for i=1:10
+            if ii~=i
+                deltaRy(i) = yBots((1/h)*t + 2, i)-yBots((1/h)*t + 2,ii);
+                deltaRx(i) = xBots((1/h)*t + 2, i)-xBots((1/h)*t + 2,ii);
+            end
+            if collision(i) < .68
+                direction(i) = direction(i) * -1;
+                disp('collision')
+            end
+        end
+    end
+    
 end
 
 
+%plot
 figure(1)
 axis([-10,10,-10,10,]);
 hold on
