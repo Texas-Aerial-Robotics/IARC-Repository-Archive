@@ -4,13 +4,14 @@ clc; clear all
 RT = 5; %radius for troll bots
 t = 0; %time variable
 h = .5; %step size for time 
-v = .25; %m/s
+v = .33; %m/s
 rVector =0;% distance travled
 direction = -1*ones(1,10); % simulates 180 turns
 R=1; %starting radius for normal bots
 objective = 0; %logical variable that shows if the quad copter has an objective
 xquad = 0; %starting x position for quad
 yquad = 10; %starting y position for quad
+botsInGame = ones(1,10);
 
 %loops 10 times
 %   the body of the for loop set the intial postiotions of the bots
@@ -20,6 +21,7 @@ for i=1:10
     y0Bot(i) = R*sin(dtheta0*i);
     yBots(1,i) =y0Bot(i);
     xBots(1,i) =x0Bot(i);
+    thetaBot(i) = dtheta0*i;
 end
 
 % loops at h interval to ten mins
@@ -30,7 +32,8 @@ for t=0:h:600
         %calculate which bot to fly to
         
     end
-    
+    %testa if the time is a multiple of 20
+    %    if true the directions of the bots are reversed 
     if mod(t,20) == 0
         disp('time')
         direction = direction * -1;
@@ -44,18 +47,33 @@ for t=0:h:600
         yt1((1/h)*t + 2,n) = RT*sin(theta + theta0*n);
         xt1((1/h)*t + 2,n) = RT*cos(theta+ theta0*n);
     end
-   
-    %bot positions
-    %%%
     
     %loops ten times 
     %   body of loop calculates the position for the ten bots at the
     %   specific t value
     rVector = v*h ;
     for k=1:10
-        thetaBot = dtheta0*k;
-        yBots((1/h)*t + 2,k) = direction(k)*rVector*sin(thetaBot) + yBots((1/h)*t+1,k);
-        xBots((1/h)*t + 2,k) = direction(k)*rVector*cos(thetaBot) + xBots((1/h)*t+1,k);
+        %tests if bot is still in the game
+        %   if true the new position is calculated
+        if botsInGame(k) == 1
+        yBots((1/h)*t + 2,k) = direction(k)*rVector*sin(thetaBot(k)) + yBots((1/h)*t+1,k);
+        xBots((1/h)*t + 2,k) = direction(k)*rVector*cos(thetaBot(k)) + xBots((1/h)*t+1,k);
+        end
+        %if bot is no longer in the arena the bots are given a postiton
+        %   outside the arena
+        if botsInGame(k) == 0
+            yBots((1/h)*t + 2,k) = 100;
+            xBots((1/h)*t + 2,k) = 100;
+        end
+    end
+    %loops 10 times for the 10 bots
+    %   body of the loop decides if the bot has gone out of bounds
+    for k=1:10
+        %tests if the position has gone out of the domain of the arena
+        %   if true the logical variable is set to false
+        if abs(yBots((1/h)*t + 2,k)) >= 10 || abs(xBots((1/h)*t + 2,k)) > 10
+            botsInGame(k) = 0;
+        end
     end
     
     %loops 4 time sfor the 4 troll bots
