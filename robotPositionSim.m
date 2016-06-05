@@ -38,6 +38,16 @@ for t=0:h:600
         disp('time')
         direction = direction * -1;
     end
+    %tests if time is a multiple of time
+    %   if true noise is added to the trjectory 
+    if mod(t,5) == 0
+        disp('rng');
+        %loops 10times
+        %   adds noise to the angle of the bot's trajectory 
+        for i=1:10
+           thetaBot(i) = thetaBot(i) + (randi([-20,20])*(pi/180)); 
+        end
+    end
     %troll bots positions
     theta = (v*t)/RT;
     theta0 = (2*pi/4);
@@ -123,6 +133,9 @@ end
 figure(1)
 axis([-10,10,-10,10,]);
 hold on
+i=0;
+strTime = num2str(i*h);
+ a=annotation('textbox','String',strTime,'FitBoxToText','on');
 for i=1:length(xt1)
     for k=1:4
         plot(xt1(i,k),yt1(i,k),'ro','markersize', 6) 
@@ -130,6 +143,8 @@ for i=1:length(xt1)
     for n=1:10
         plot(xBots(i,n),yBots(i,n),'bo','markersize', 6)
     end
+    strTime = num2str((i*h)-1);
+    a.String = strTime;
     hold on
     drawnow
     cla
