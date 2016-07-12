@@ -5,10 +5,10 @@ clc; clear all
 close all
 
 
-gRGB = imread('FiftyGray.jpg');
+gRGB = imread('test.jpg');
 g = rgb2gray(gRGB);
 subplot(1,4,1) , imshow(g)
-info = imfinfo('FiftyGray.jpg')
+info = imfinfo('test.jpg')
 % adds noise 
 for p=1:250
    for q=1:374
@@ -41,8 +41,8 @@ g4 = [4, 16, 26, 16, 4];
 g5 = [1, 4,  7,  4,  1];
 guassMask = [g1; g2; g3; g4; g5];
 guassMask = (1/273)*guassMask;
-for p=3:248
-    for q=3:372
+for p=3:541
+    for q=3:528
         mSub = zeros(5);
         for x=-2:2
             for y=-2:2
