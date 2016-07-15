@@ -3,7 +3,7 @@
 %   the output for this function is the filtered matrix of pixels
 %   last modified by Eric Johnson on 6/27/16
 function [Ifiltered ] = guassFilter(I) 
-[m,n] = size(I);
+[m,n,z] = size(I)
 Ifiltered = zeros(m,n);
 dimension = 3;
 sigma = 2;
@@ -41,6 +41,5 @@ for p=2:n-1
         
     end
 end
-
 
 

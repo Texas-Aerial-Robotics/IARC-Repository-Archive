@@ -3,14 +3,15 @@
 clc; clear all 
 close all
 
-I = imread('roomba.jpg');
+I = rgb2gray(imread('triangleTest.png'));
 [height,width,z1] = size(I);
 figure(1), imshow(I)
-info = imfinfo('roomba.jpg')
+info = imfinfo('triangleTest.png')
 I = double(I);
 [Ifiltered ] = guassFilter(I);
 I = Ifiltered;
-figure(2), imshow(im2uint8(I))
+size(I)
+figure(2), imshow(mat2gray(I))
 
 [dx,dy] = imageDerivative(I);
 
@@ -27,7 +28,11 @@ for p=1:n
       end
    end
 end
-figure(2), imshow(im2uint8(edges))
+C = corner(I);
+figure(3), imshow(im2uint8(edges))
+figure(4), imshow(mat2gray(I));
+hold on
+plot(C(:,1), C(:,2), 'r*');
 
 %make 3D derivative matrix 
 dXY = cat(3, dx, dy);
@@ -53,11 +58,12 @@ for p=1:n
       end 
    end
 end
-figure(3), imshow(im2uint8(harris))
+figure(5), imshow(mat2gray(harris))
 sum = 0; 
 for i=1:(m*n)
     if harris(i) == 0
        sum = sum +1; 
     end
 end
+
 
