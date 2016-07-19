@@ -36,11 +36,10 @@ plot(C(:,1), C(:,2), 'r*');
 
 %make 3D derivative matrix 
 dXY = cat(3, dx, dy);
-threshold = 90;
-closeEigen = 5;
 harris = ones(m,n); 
 %cycle derivative matrix 
 %adjusts column 
+count =0;
 for p=1:n
     %adjusts row
    for q=1:m
@@ -52,18 +51,22 @@ for p=1:n
          end
       end
       [vector, value] = eig(A); 
-      R = det(vector) - (trace(vector))^2;
+      if abs(value(1))>0 && abs(value(4)) > 0
+          count = count +1;
+      end
+      R = (value(1)*value(4)) - .04*((value(1)+value(4))^2)
       if R > 0
-            harris(q,p) = 0;
+          disp
+            harris(q,p) = 0
       end 
    end
 end
-figure(5), imshow(mat2gray(harris))
+
 sum = 0; 
 for i=1:(m*n)
     if harris(i) == 0
        sum = sum +1; 
     end
 end
-
-
+figure(5), imshow(mat2gray(harris))
+count
