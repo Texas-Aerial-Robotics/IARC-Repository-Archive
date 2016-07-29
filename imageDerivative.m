@@ -10,8 +10,8 @@ function [dx,dy] = imageDerivative(I)
 [m,n] = size(I);
 dx = zeros(m,n);
 dy = zeros(m,n);
-DMaskx = [1,0,-1;2,0,-2;1,0,-1];
-DMasky = [1,2,1;0,0,0;-1,-2,-1];
+DMaskx = [1,0,-1;1,0,-1;1,0,-1];%[1,0,-1;2,0,-2;1,0,-1];
+DMasky = [1,1,1;0,0,0;-1,-1,-1];%[1,2,1;0,0,0;-1,-2,-1];
 
 %take derivative in x direction
 
@@ -21,7 +21,7 @@ for p=2:n-1
     %q incriments row being used 
     %   loops from row 2 to 2nd to last row
     for q=2:m-1
-        mSub = zeros(3);
+        msub = zeros(3);
         %creates 3x3 array of surrounding pixels 
         %   incriments from left to right -->
         for x=-1:1
@@ -54,7 +54,7 @@ for p=2:n-1
     %q incriments row being used 
     %   loops from row 2 to 2nd to last row
     for q=2:m-1
-        mSub = zeros(3);
+        msub = zeros(3);
         %creates 3x3 array of surrounding pixels 
         %   incriments from left to right -->
         for x=-1:1
