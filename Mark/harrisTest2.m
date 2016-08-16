@@ -2,7 +2,7 @@ clc; clear all
 close all
 %triangleTest.png
 %square.jpg
-I = rgb2gray(imread('triangleTest.png'));
+I = rgb2gray(imread('square.jpg'));
 [height,width,z1] = size(I);
 info = imfinfo('triangleTest.png')
 figure(1), imshow(I)
