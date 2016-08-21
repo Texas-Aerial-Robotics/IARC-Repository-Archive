@@ -1,5 +1,5 @@
 num=7;
-
+sigma=1;
 mask=zeros(num,num);
 shift=(num-1)/2;
 for a=1:num

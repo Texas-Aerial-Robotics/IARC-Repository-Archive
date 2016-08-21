@@ -1,3 +1,5 @@
+clc; clear all
+close all
 %image reduction test
 OG=imread('University-of-Texas-Football.jpg');
 figure(1)
