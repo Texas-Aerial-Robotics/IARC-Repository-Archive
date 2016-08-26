@@ -15,8 +15,6 @@ sigma = 1;
 [guassMask] = createGuassMask(dimension, sigma)
 
 I = conv2(I, guassMask, 'same');
-M = I;
-num = 7;
 
 LoG = createLoG(dimension, sigma)
 I = conv2(I, LoG, 'same');
