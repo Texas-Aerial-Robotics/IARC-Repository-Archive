@@ -2,8 +2,8 @@
 %Last modified by Eric Johnson on 8/20/2016
 clc; clear all
 close all
-
-I = rgb2gray(imread('roomba.jpg'));
+tic
+I = rgb2gray(imread('FiftyGray.jpg'));
 figure(1), imshow(I)
 info = imfinfo('roomba.jpg')
 [height, width, z] = size(I);
@@ -32,6 +32,6 @@ for row=1:height
    end
 end
 figure(3), imshow(edges)
-
+toc
 
 
