@@ -31,7 +31,7 @@ scaleSpaceL = zeros(height, width, 16);
  for i=1:2:count-1
         scaleSpaceL(:,:,(i+1)/2) = scaleSpace(:,:,i+1) - scaleSpace(:,:,i);
  end
-
+count-1
 
 %show scale space 
 count=1;
@@ -46,4 +46,25 @@ for ii=1:4
 end
 
 %look for extrema 
-for
+count=1;
+for octave=1:4
+    for row=2:height-1
+        for col=2:width-1
+            %fill submatrix
+            mSub = scaleSpaceL(row-1:row+1,col-1:col+1,octave*3-2:octave*3);
+            for i=1:27
+                if abs(mSub(i)) > abs(mSub(2,2,2))
+                    break
+                end
+                if i==27
+                    extrema(count,:) = [row, col];
+                    count = count +1;
+                end
+            end
+        end
+    end
+end
+figure(6), imshow(mat2gray(I))
+hold on
+plot(etrema(:,1), etrema(:,2), 'b*');
+
