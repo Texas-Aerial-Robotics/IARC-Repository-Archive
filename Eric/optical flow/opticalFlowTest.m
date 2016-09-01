@@ -7,4 +7,3 @@ figure(1); imshow(mat2gray(im1))
 figure(2); imshow(mat2gray(im2))
 [u, v] = lucasKanade(im1, im2)
 
-

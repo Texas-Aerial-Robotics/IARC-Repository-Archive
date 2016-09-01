@@ -13,12 +13,12 @@ u = zeros(size(im1));
 v = zeros(size(im2));
 
 [height, width] = size(im1);
-for row=2:height-1
-   for col=2:width-1
+for i=2:height-1
+   for j=2:width-1
       %fill least square matrix A
-      curFx = fx(row-1:row+1, col-1:col+1);
-      curFy = fy(row-1:row+1, col-1:col+1);
-      curFt = ft(row-1:row+1, col-1:col+1);
+      curFx = fx(i-1:i+1, j-1:j+1);
+      curFy = fy(i-1:i+1, j-1:j+1);
+      curFt = ft(i-1:i+1, j-1:j+1);
       
       curFx = curFx';
       curFy = curFy';
@@ -33,8 +33,8 @@ for row=2:height-1
       
       U = pinv(A'*A)*A'*curFt;
       
-      u(row,col)=U(1);
-      v(row,col)=U(2);
+      u(i,j)=U(1);
+      v(i,j)=U(2);
       
    end
 end
