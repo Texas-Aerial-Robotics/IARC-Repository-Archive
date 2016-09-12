@@ -1,7 +1,0 @@
-createGuassMask
-	%userdefined function that creates square guassian masks
-guassFilter
-	%userdefined function that applies guass filters to images to 
-	%	smooth the image
-imageDerivative
-	%takes the derivative of images

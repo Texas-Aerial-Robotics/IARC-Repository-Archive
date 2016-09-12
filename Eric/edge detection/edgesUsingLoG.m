@@ -3,7 +3,7 @@
 clc; clear all
 close all
 tic
-I = rgb2gray(imread('FiftyGray.jpg'));
+I = rgb2gray(imread('roomba.jpg'));
 figure(1), imshow(I)
 info = imfinfo('roomba.jpg')
 [height, width, z] = size(I);
