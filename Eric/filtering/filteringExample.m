@@ -7,9 +7,10 @@ info = imfinfo('roomba.jpg')
 figure(1), imshow(I)
 I = double(I);
 
-dimension = 5;
+%dimension needs to be an odd number in order to get a symetric mask
+dimension = 11;
 sigma = (dimension-1)/3;
-[guassMask] = createGuassMask(dimension, sigma)
+[guassMask] = createGuassMask(dimension, sigma);
 
 Icon = convolution(guassMask, I);
-figure(1), imshow(mat2gray(Icon))
+figure(2), imshow(mat2gray(Icon))

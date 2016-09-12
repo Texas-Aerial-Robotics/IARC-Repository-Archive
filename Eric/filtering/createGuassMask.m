@@ -19,6 +19,7 @@ if mod(dimension,2)== 1
             guassMask(y+r+1,x+r+1) = (1/(2*pi*sigma^2))*exp((-1*(x^2+y^2))/(2*sigma^2));
         end
     end
+    guassMask = guassMask/(sum(sum(guassMask)));
 % if the input size is even the the user defined function will return an
 %   error
 else
