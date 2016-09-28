@@ -9,8 +9,9 @@ info = imfinfo('roomba.jpg')
 figure(1), imshow(I)
 I = double(I);
 
-dimension = 5;
+dimension = 11;
 sigma = (dimension-1)/3;
+r = (dimension-1)/2;
 [guassMask] = createGuassMask(dimension, sigma);
 
 tic 
@@ -21,8 +22,9 @@ figure(2), imshow(mat2gray(Icon))
 IDis = zeros(748,1500,2);
 
 
-IDis(:,:,1) = I(1:height/2,1:width);
-IDis(:,:,2) = I((height/2)+1:height,1:width);
+IDis(:,:,1) = I(1:(height/2)+r,1:width);
+IDis(:,:,2) = I((height/2)+1-r:height,1:width);
+
 tic
 parfor k=1:2
     I1Con(:,:,k) = convolution(guassMask, IDis(:,:,k));
