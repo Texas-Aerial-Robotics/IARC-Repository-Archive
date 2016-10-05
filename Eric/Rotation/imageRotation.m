@@ -8,7 +8,7 @@ figure(1), imshow(I);
 I = double(I);
 
 %define rotation
-theta = 90;
+theta = 40;
 [height, width] = size(I);
 
 %make sure there is a center pixle 

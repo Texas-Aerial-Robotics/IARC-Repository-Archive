@@ -2,7 +2,7 @@
 %   MEETING 1: 9/14/2016
 function [Ifiltered] = convolution1(I, mask)
 %take size of image matrix
-[rowI, colI] = size(I);
+[rowI, colI] =size(I);
 
 [dx, dy] = size(mask);
 
