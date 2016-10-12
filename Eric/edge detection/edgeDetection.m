@@ -9,8 +9,8 @@ info = imfinfo('roomba.jpg')
 I = double(I);
 
 
-dimension=3;
-sigma=2;
+dimension=5;
+sigma=(dimension-1)/3;
 guassMask = createGuassMask(dimension, sigma);
 
 [Ifiltered] = convolution(guassMask, I);
@@ -37,7 +37,7 @@ for p=1:n
 end
 figure(3), imshow(im2uint8(edges))
 
-
-
+edges2 = bwareaopen(edges, 10000, 4);
+figure(4), imshow(im2uint8(edges2))
 
 
