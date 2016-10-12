@@ -7,21 +7,42 @@ function guassMask = createGuassian(dimension)
 
 %create zeros matrix size of mask
 guassMask = zeros(dimension);
-%define sigma 
-sigma=(dimension-1)/3;
+if mod(dimension, 2) == 0
+    sigma=(dimension-1)/3;
+    %apply guassian function using mask positions as points
+    %   NOTE: we want the mask to be symetric so we shift the origin to the
+    %   center of the matrix
+    for row=1:dimension
+        for col=1:dimension
+            %shift origin
+            x=col-(((dimension)/2) + .5);
+            y=row-(((dimension)/2) + .5);
+            
+            %apply guassian function
+            guassMask(row,col)=(1/sqrt(2*pi*sigma))*exp(-(x^2+y^2)/(2*sigma^2));
+            
+        end
+    end
+    
+end
 
-%apply guassian function using mask positions as points
-%   NOTE: we want the mask to be symetric so we shift the origin to the
-%   center of the matrix
-for row=1:dimension
-    for col=1:dimension
-        %shift origin 
-        x=col-((dimension+1)/2);
-        y=row-((dimension+1)/2);
-        
-        %apply guassian function 
-        guassMask(row,col)=(1/sqrt(2*pi*sigma))*exp(-(x^2+y^2)/(2*sigma^2));
-        
+%define sigma 
+if mod(dimension, 2) == 1
+    sigma=(dimension-1)/3;
+    
+    %apply guassian function using mask positions as points
+    %   NOTE: we want the mask to be symetric so we shift the origin to the
+    %   center of the matrix
+    for row=1:dimension
+        for col=1:dimension
+            %shift origin
+            x=col-((dimension+1)/2);
+            y=row-((dimension+1)/2);
+            
+            %apply guassian function
+            guassMask(row,col)=(1/sqrt(2*pi*sigma))*exp(-(x^2+y^2)/(2*sigma^2));
+            
+        end
     end
 end
         
