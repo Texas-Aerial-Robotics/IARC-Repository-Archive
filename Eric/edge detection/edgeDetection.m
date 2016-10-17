@@ -37,7 +37,7 @@ for p=1:n
 end
 figure(3), imshow(im2uint8(edges))
 
-edges2 = bwareaopen(edges, 10000, 4);
-figure(4), imshow(im2uint8(edges2))
+%edges2 = bwareaopen(edges, 10000, 4);
+%figure(4), imshow(im2uint8(edges2))
 
 
