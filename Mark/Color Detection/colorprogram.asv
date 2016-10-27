@@ -1,0 +1,12 @@
+%color detection program
+I=imread('colorRoomba.jpg');
+figure(1)
+imshow(I)
+I2=colorfilt(I,22,86,16,30);
+figure(2)
+imshow(I2)
+
+point=findcenter(I2);
+
+
+
