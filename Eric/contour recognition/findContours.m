@@ -1,18 +1,4 @@
-clc; clear all
-close all
-% I1 = [1,1,1,1,1,1,1];
-% I2 = [1,1,0,0,1,1,1];
-% I3 = [1,0,1,1,0,1,1];
-% I4 = [1,0,1,1,1,0,1];
-% I5 = [1,1,0,0,0,1,1];
-% I6 = [1,1,1,1,1,1,1];
-% I = [I1; I2; I3; I4; I5; I6];
-IOG = imread('multiTargets.jpg');
-I = rgb2gray(IOG);
-I = double(I);
-
-I = detectEdges(I);
-figure(1), imshow(mat2gray(I))
+function [cFill] = findContours(I)
 
 
 
@@ -99,7 +85,6 @@ for row=1:height
                    end
                end
             end
-            points
             stop = false;
         end
         if stop == true
@@ -110,24 +95,3 @@ for row=1:height
         break
     end
 end
-
-p = zeros(1,2);
-for k=1:numContours
-   [p(k,:)]=findcenter(cFill(:,:,k)); 
-end
-
-
-%figure(2), imshow(mat2gray(contour(:,:,1)))
-figure(3), imshow(mat2gray(cFill(:,:,1)))
-figure(4), imshow(mat2gray(I))
-figure(5), imshow(mat2gray(cFill(:,:,2)))
-figure(6), imshow(IOG)
-hold on
-for k=1:numContours
-plot(round(p(k,2)),round(p(k,1)),'*b')
-end
-
-msub
-pmSub
-
-

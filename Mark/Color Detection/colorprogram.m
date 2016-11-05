@@ -1,8 +1,8 @@
 %color detection program
-I=imread('rgbtest.jpg');
+I=imread('colorRoomba.jpg');
 figure(1)
 imshow(I)
-I2=colorfilt(I,0,0,255,30);
+I2=colorfilt(I,22,86,16,30);
 figure(2)
 imshow(I2)
 hold on
