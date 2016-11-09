@@ -1,5 +1,5 @@
 %color detection program
-I=imread('colorRoomba.jpg');
+I=imread('multiTargets.jpg');
 figure(1)
 imshow(I)
 I2=colorfilt(I,22,86,16,30);
