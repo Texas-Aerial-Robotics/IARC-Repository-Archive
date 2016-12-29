@@ -1,6 +1,6 @@
 clc; clear all
 close all
-IOG = imread('test2.jpg');
+IOG = imread('rTest.jpg');
 figure(1), imshow(IOG)
 [height, width, d] = size(IOG);
 I = double(IOG);
@@ -9,19 +9,23 @@ cal = imread('calibration.jpg');
 r = 88 %sum(sum(cal(:,:,1)))/(height*width);
 g = 125 %sum(sum(cal(:,:,2)))/(height*width);
 b = 73 %sum(sum(cal(:,:,3)))/(height*width);
-[I]=colorfilt(I,r,g,b,40);
-I = imfill(I, 'holes');
-I = bwmorph(I, 'erode');
-I = bwmorph(I, 'dilate',8);
-I = bwmorph(I, 'erode');
-I = bwmorph(I, 'dilate',8);
-I = bwmorph(I, 'erode');
-I = bwmorph(I, 'dilate',8);
-I = bwmorph(I, 'erode');
-I = bwmorph(I, 'dilate',8);
-I = bwmorph(I, 'erode');
-I = bwmorph(I, 'dilate',8);
-I = bwmorph(I, 'erode');
+guassMask = createGuassian(3);
+% for i=1:3
+% [I(:,:,i)] = convolution1(I(:,:,i), guassMask);
+% end
+[I]=colorfilt(I,r,g,b,);
+% I = imfill(I, 'holes');
+% I = bwmorph(I, 'erode');
+% I = bwmorph(I, 'dilate',8);
+% I = bwmorph(I, 'erode');
+% I = bwmorph(I, 'dilate',8);
+% I = bwmorph(I, 'erode');
+% I = bwmorph(I, 'dilate',8);
+% I = bwmorph(I, 'erode');
+% I = bwmorph(I, 'dilate',8);
+% I = bwmorph(I, 'erode');
+% I = bwmorph(I, 'dilate',8);
+% I = bwmorph(I, 'erode');
 figure(2), imshow(I)
 I = 255*I;
 I = detectEdges(I);
