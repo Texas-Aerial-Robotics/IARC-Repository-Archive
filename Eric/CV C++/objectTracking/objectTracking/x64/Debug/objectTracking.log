@@ -1,0 +1,33 @@
+﻿  objectTracking.cpp
+c:\opencv320\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(42): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(72): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(72): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(72): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(73): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(73): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(73): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(74): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(74): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(74): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(75): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(75): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(75): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(76): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(76): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(76): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(77): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(77): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(77): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(150): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(163): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\eric johnson\documents\visual studio 2015\projects\c++\objecttracking\objecttracking\objecttracking.cpp(164): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  objectTracking.vcxproj -> C:\Users\Eric Johnson\Documents\Visual Studio 2015\Projects\C++\objectTracking\x64\Debug\objectTracking.exe
+  objectTracking.vcxproj -> C:\Users\Eric Johnson\Documents\Visual Studio 2015\Projects\C++\objectTracking\x64\Debug\objectTracking.pdb (Full PDB)
