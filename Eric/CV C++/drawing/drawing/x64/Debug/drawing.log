@@ -1,0 +1,30 @@
+﻿  drawing.cpp
+c:\opencv320\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(57): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(65): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(73): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(74): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(75): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(76): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(77): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(78): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(79): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(81): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(82): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(83): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(84): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(85): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(86): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(87): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(88): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(89): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(90): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(91): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(108): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(109): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\eric\documents\github\mycode\visual studio 2015\projects\drawing\drawing\drawing.cpp(110): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  drawing.vcxproj -> C:\Users\Eric\Documents\GitHub\Mycode\Visual Studio 2015\Projects\drawing\x64\Debug\drawing.exe
+  drawing.vcxproj -> C:\Users\Eric\Documents\GitHub\Mycode\Visual Studio 2015\Projects\drawing\x64\Debug\drawing.pdb (Full PDB)
