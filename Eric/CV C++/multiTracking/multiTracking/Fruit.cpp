@@ -10,8 +10,8 @@ Fruit::Fruit(string name)
 	setType(name);
 	if (name == "apple")
 	{
-		setHSVMin(Scalar(0, 144, 94));
-		setHSVMax(Scalar(65, 255, 235));
+		setHSVMin(Scalar(42, 47, 37));
+		setHSVMax(Scalar(70, 142, 145));
 	}
 	if (name == "banana")
 	{

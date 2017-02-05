@@ -26,6 +26,7 @@
 #include <opencv2\highgui.hpp>
 #include <opencv\cv.hpp>
 #include "Fruit.h"
+#include "Roomba.h"
 using namespace cv;
 using namespace std;
 //initial min and max HSV filter values.
@@ -93,13 +94,13 @@ void createTrackbars() {
 
 
 }
-void drawObject(vector<Fruit> theFruits, Mat &frame) {
+void drawObject(vector<Roomba> theRoombas, Mat &frame) {
 	
-	for (int i = 0; i < theFruits.size(); i++)
+	for (int i = 0; i < theRoombas.size(); i++)
 	{
-		cv::circle(frame, cv::Point(theFruits.at(i).getXPos(), theFruits.at(i).getYPos()), 10, cv::Scalar(0, 0, 255));
-		cv::putText(frame, intToString(theFruits.at(i).getXPos()) + " , " + intToString(theFruits.at(i).getYPos()), cv::Point(theFruits.at(i).getXPos(), theFruits.at(i).getYPos() + 20), 1, 1, Scalar(0, 255, 0));
-		cv::putText(frame, theFruits.at(i).getType(), cv::Point(theFruits.at(i).getXPos(), theFruits.at(i).getYPos() - 30), 1, 2, theFruits.at(i).getColor());
+		cv::circle(frame, cv::Point(theRoombas.at(i).getXPos(), theRoombas.at(i).getYPos()), 10, cv::Scalar(0, 0, 255));
+		cv::putText(frame, intToString(theRoombas.at(i).getXPos()) + " , " + intToString(theRoombas.at(i).getYPos()), cv::Point(theRoombas.at(i).getXPos(), theRoombas.at(i).getYPos() + 20), 1, 1, Scalar(0, 255, 0));
+		cv::putText(frame, theRoombas.at(i).getType(), cv::Point(theRoombas.at(i).getXPos(), theRoombas.at(i).getYPos() - 30), 1, 2, theRoombas.at(i).getColor());
 	}
 }
 void morphOps(Mat &thresh) {
@@ -124,7 +125,7 @@ void morphOps(Mat &thresh) {
 void trackFilteredObject(Mat threshold, Mat HSV, Mat &cameraFeed) {
 
 	vector<Fruit> apples;
-
+	vector<Roomba> roombas;
 
 
 	Mat temp;
@@ -152,11 +153,12 @@ void trackFilteredObject(Mat threshold, Mat HSV, Mat &cameraFeed) {
 				//iteration and compare it to the area in the next iteration.
 				if (area>MIN_OBJECT_AREA) {
 					Fruit apple;
-					apple.setXPos(moment.m10 / area);
-					apple.setYPos(moment.m01 / area);
+					Roomba green;
+					green.setXPos(moment.m10 / area);
+					green.setYPos(moment.m01 / area);
 
 					apples.push_back(apple);
-
+					roombas.push_back(green);
 
 					objectFound = true;
 
@@ -168,17 +170,16 @@ void trackFilteredObject(Mat threshold, Mat HSV, Mat &cameraFeed) {
 			//let user know you found an object
 			if (objectFound == true) {
 				//draw object location on screen
-				drawObject(apples, cameraFeed);
+				drawObject(roombas, cameraFeed);
 			}
 
 		}
 		else putText(cameraFeed, "TOO MUCH NOISE! ADJUST FILTER", Point(0, 50), 1, 2, Scalar(0, 0, 255), 2);
 	}
 }
-void trackFilteredObject(Fruit theFruit, Mat threshold, Mat HSV, Mat &cameraFeed) {
+void trackFilteredObject(Roomba theRoomba, Mat threshold, Mat HSV, Mat &cameraFeed) {
 
-	vector<Fruit> apples;
-
+	vector<Roomba> roombas;
 
 
 	Mat temp;
@@ -205,12 +206,12 @@ void trackFilteredObject(Fruit theFruit, Mat threshold, Mat HSV, Mat &cameraFeed
 				//we only want the object with the largest area so we safe a reference area each
 				//iteration and compare it to the area in the next iteration.
 				if (area>MIN_OBJECT_AREA) {
-					Fruit apple;
-					apple.setXPos(moment.m10 / area);
-					apple.setYPos(moment.m01 / area);
-					apple.setType(theFruit.getType());
-					apple.setColor(theFruit.getColor());
-					apples.push_back(apple);
+					Roomba green;
+					green.setXPos(moment.m10 / area);
+					green.setYPos(moment.m01 / area);
+					green.setType(theRoomba.getType());
+					green.setColor(theRoomba.getColor());
+					roombas.push_back(green);
 
 
 					objectFound = true;
@@ -223,7 +224,7 @@ void trackFilteredObject(Fruit theFruit, Mat threshold, Mat HSV, Mat &cameraFeed
 			//let user know you found an object
 			if (objectFound == true) {
 				//draw object location on screen
-				drawObject(apples, cameraFeed);
+				drawObject(roombas, cameraFeed);
 			}
 
 		}
@@ -269,29 +270,30 @@ int main(int argc, char* argv[])
 		}
 		else {
 			Fruit banana("banana"), apple("apple"), cherry("cherry");
-			
+			Roomba green("green roomba"), red("red roomba");
 			
 			cvtColor(cameraFeed, HSV, COLOR_BGR2HSV);
-			inRange(HSV, apple.getHSVMin(), apple.getHSVMax(), threshold);
+			inRange(HSV, green.getHSVMin(), green.getHSVMax(), threshold);
 			morphOps(threshold);
-			trackFilteredObject(apple, threshold, HSV, cameraFeed);
-
+			trackFilteredObject(green, threshold, HSV, cameraFeed);
+			
 			cvtColor(cameraFeed, HSV, COLOR_BGR2HSV);
-			inRange(HSV, banana.getHSVMin(), banana.getHSVMax(), threshold);
+			inRange(HSV, red.getHSVMin(), red.getHSVMax(), threshold);
 			morphOps(threshold);
-			trackFilteredObject(banana, threshold, HSV, cameraFeed);
-
+			trackFilteredObject(red, threshold, HSV, cameraFeed);
+			/*
 			cvtColor(cameraFeed, HSV, COLOR_BGR2HSV);
 			inRange(HSV, cherry.getHSVMin(), cherry.getHSVMax(), threshold);
 			morphOps(threshold);
 			trackFilteredObject(cherry, threshold, HSV, cameraFeed);
+			*/
 		}
 
 		//show frames 
 		//imshow(windowName2,threshold);
 
 		imshow(windowName, cameraFeed);
-		//imshow(windowName1,HSV);
+		imshow(windowName1,HSV);
 
 
 		//delay 30ms so that screen can refresh.
