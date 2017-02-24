@@ -1,0 +1,9 @@
+﻿  badandboujie.cpp
+c:\users\mark\documents\visual studio 2015\c++\badandboujie\badandboujie\badandboujie.cpp(28): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\mark\documents\visual studio 2015\c++\badandboujie\badandboujie\badandboujie.cpp(90): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\mark\documents\visual studio 2015\c++\badandboujie\badandboujie\badandboujie.cpp(104): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\mark\documents\visual studio 2015\c++\badandboujie\badandboujie\badandboujie.cpp(105): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Roomba.cpp
+  Generating Code...
+  badandboujie.vcxproj -> C:\Users\mark\Documents\Visual Studio 2015\C++\badandboujie\x64\Debug\badandboujie.exe
+  badandboujie.vcxproj -> C:\Users\mark\Documents\Visual Studio 2015\C++\badandboujie\x64\Debug\badandboujie.pdb (Full PDB)
