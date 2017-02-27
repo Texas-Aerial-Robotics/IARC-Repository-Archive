@@ -94,6 +94,10 @@ void createTrackbars() {
 
 
 }
+void displayCoord()
+{
+
+}
 void drawObject(vector<Roomba> theRoombas, Mat &frame) {
 	
 	for (int i = 0; i < theRoombas.size(); i++)
