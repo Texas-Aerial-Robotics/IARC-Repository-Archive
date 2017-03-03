@@ -1,0 +1,7 @@
+﻿  badandboujie.cpp
+c:\users\mark\documents\visual studio 2015\c++\development\badandboujie\badandboujie.cpp(28): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\mark\documents\visual studio 2015\c++\development\badandboujie\badandboujie.cpp(101): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\mark\documents\visual studio 2015\c++\development\badandboujie\badandboujie.cpp(115): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\mark\documents\visual studio 2015\c++\development\badandboujie\badandboujie.cpp(116): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  badandboujie.vcxproj -> C:\Users\mark\Documents\Visual Studio 2015\C++\development\x64\Debug\badandboujie.exe
+  badandboujie.vcxproj -> C:\Users\mark\Documents\Visual Studio 2015\C++\development\x64\Debug\badandboujie.pdb (Full PDB)
