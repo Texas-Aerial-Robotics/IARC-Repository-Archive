@@ -1,0 +1,25 @@
+// Camera Feed and display 
+
+#include "stdafx.h"
+#include <iostream>
+#include <opencv2\highgui\highgui.hpp>
+#include <opencv2\imgproc\imgproc.hpp>
+
+using namespace cv;
+using namespace std;
+
+int main()
+{
+	Mat cameraFeed;
+	
+	VideoCapture capture;
+	capture.open(1);
+
+	while (1)
+	{
+		capture.read(cameraFeed);
+		imshow("Camera Output");
+		waitKey(30);	
+
+	}
+}
