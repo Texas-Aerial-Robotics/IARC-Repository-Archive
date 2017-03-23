@@ -1,0 +1,7 @@
+﻿  badandboujie.cpp
+c:\users\mark\documents\github\iarc-repository-\mark\colorplusgrid\badandboujie\badandboujie.cpp(28): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\mark\documents\github\iarc-repository-\mark\colorplusgrid\badandboujie\badandboujie.cpp(109): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\mark\documents\github\iarc-repository-\mark\colorplusgrid\badandboujie\badandboujie.cpp(123): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\mark\documents\github\iarc-repository-\mark\colorplusgrid\badandboujie\badandboujie.cpp(124): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  badandboujie.vcxproj -> C:\Users\mark\Documents\GitHub\IARC-repository-\Mark\colorplusgrid\x64\Debug\badandboujie.exe
+  badandboujie.vcxproj -> C:\Users\mark\Documents\GitHub\IARC-repository-\Mark\colorplusgrid\x64\Debug\badandboujie.pdb (Full PDB)
