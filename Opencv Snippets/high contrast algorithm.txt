@@ -1,0 +1,30 @@
+// histEqualization.cpp : Defines the entry point for the console application.
+//
+
+//created by Eric Johnson 
+// the purpose of this program is to make an image high contrast by spreading out the histograms of pixle intensities 
+#include "stdafx.h"
+#include <opencv2/opencv.hpp>
+
+using namespace cv;
+using namespace std;
+
+int main()
+{
+	Mat img1, img2;
+
+	img1 = imread("C:\\Users\\Eric Johnson\\Pictures\\robot.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+
+
+	equalizeHist(img1, img2);
+
+	namedWindow("source_window", CV_WINDOW_AUTOSIZE);
+	namedWindow("equalized_window", CV_WINDOW_AUTOSIZE);
+
+	imshow("source_window", img1);
+	imshow("equalized_window", img2);
+
+	waitKey(0);
+
+    return 0;
+}
