@@ -1,0 +1,32 @@
+// blackAndWhite.cpp : Defines the entry point for the console application.
+//
+
+// created by Eric Johnson
+// the purpose of this program is to find find all the white pixles
+// the program make all pixles with < 200 intesity black (0) and > 200 white (255)
+
+#include "stdafx.h"
+#include <iostream>
+#include <opencv2\highgui\highgui.hpp>
+#include <opencv2\imgproc\imgproc.hpp>
+
+using namespace cv;
+using namespace std;
+
+int threshold_value = 0;
+int const max_value = 255;
+int const max_type = 4;
+int const max_BINARY_value = 255;
+
+int main()
+{
+	Mat img, imgThresh;
+	img = imread("C:\\Users\\Eric Johnson\\Pictures\\grid.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+
+	// takes every pixle < 200 and makes it black (0);  >200 is white (255)
+	threshold(img, imgThresh, 200, max_BINARY_value, 1);
+	imshow("imgThresh", imgThresh);
+	imshow("img", img);
+	waitKey(0);
+    return 0;
+}
