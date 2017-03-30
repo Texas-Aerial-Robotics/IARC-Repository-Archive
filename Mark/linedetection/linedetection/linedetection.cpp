@@ -13,7 +13,7 @@ int main()
 	Mat cameraFeed;
 	Mat dst, cdst, binary,output;
 	VideoCapture capture;
-	capture.open(1);
+	capture.open(0);
 
 	while (1)
 	{
