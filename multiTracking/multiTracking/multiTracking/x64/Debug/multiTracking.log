@@ -1,0 +1,36 @@
+﻿  multiTracking.cpp
+c:\users\camer\onedrive\documents\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(48): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(78): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(78): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(78): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(79): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(79): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(79): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(80): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(80): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(80): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(81): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(81): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(81): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(82): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(82): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(82): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(83): warning C4474: 'sprintf' : too many arguments passed for format string
+  c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(83): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(83): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(147): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(162): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(163): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(201): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(215): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\camer\desktop\multitracking\multitracking\multitracking.cpp(216): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  multiTracking.vcxproj -> C:\Users\camer\Desktop\multiTracking\x64\Debug\multiTracking.exe
+  multiTracking.vcxproj -> C:\Users\camer\Desktop\multiTracking\x64\Debug\multiTracking.pdb (Full PDB)
