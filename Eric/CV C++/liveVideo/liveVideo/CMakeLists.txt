@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( liveVideo )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( liveVideo liveVideo.cpp )
+target_link_libraries( liveVideo ${OpenCV_LIBS} )

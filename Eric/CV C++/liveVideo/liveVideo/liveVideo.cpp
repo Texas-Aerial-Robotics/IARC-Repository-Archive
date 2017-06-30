@@ -1,8 +1,8 @@
 // liveVideo.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
-#include <opencv2\opencv.hpp>
+
+#include <opencv2/opencv.hpp>
 #include <iostream>
 
 using namespace cv;
@@ -14,10 +14,7 @@ int main(int argc, char** argv)
 	namedWindow("Canny", WINDOW_AUTOSIZE);
 	VideoCapture cap;
 
-	if (argc == 1)
-	{
-		cap.open(0);
-	}
+	cap.open(1);
 	if (!cap.isOpened())
 	{
 		cout << "camera could not be opened" << endl;

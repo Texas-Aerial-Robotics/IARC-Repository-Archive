@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <opencv/cv.hpp>
-#include <opencv2\highgui\highgui.hpp>
+#include <opencv2/highgui/highgui.hpp>
 using namespace cv;
 using namespace std;
 class Roomba

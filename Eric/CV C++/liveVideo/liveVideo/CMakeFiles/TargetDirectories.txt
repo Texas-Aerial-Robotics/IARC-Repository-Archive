@@ -1,0 +1,3 @@
+/home/mark/Documents/IARC-repository-/Eric/CV C++/liveVideo/liveVideo/CMakeFiles/edit_cache.dir
+/home/mark/Documents/IARC-repository-/Eric/CV C++/liveVideo/liveVideo/CMakeFiles/rebuild_cache.dir
+/home/mark/Documents/IARC-repository-/Eric/CV C++/liveVideo/liveVideo/CMakeFiles/liveVideo.dir
